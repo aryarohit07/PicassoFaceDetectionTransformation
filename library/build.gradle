@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+ext {
+    PUBLISH_GROUP_ID = 'com.github.aryarohit07'
+    PUBLISH_ARTIFACT_ID = 'picasso-facedetection-transformation'
+    PUBLISH_VERSION = PUBLISH_VERSION_NAME
+}
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile "com.google.android.gms:play-services-vision:${GOOGLE_PLAY_VERSION}"
+    compile "com.squareup.picasso:picasso:${PICASSO_VERSION}"
+}
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
