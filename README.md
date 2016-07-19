@@ -17,8 +17,14 @@ dependencies {
     compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.1'
 }
 ```
-
 STEP 2:
+Intialize the detector with either activity's context for application context in onCreate() method
+
+```java
+PicassoFaceDetector.initialize(this); // 'this' is context
+```
+
+STEP 3:
 Set picasso transform
 -------
 
@@ -30,6 +36,13 @@ Picasso
   .centerInside()
   .transform(new CenterFaceCrop(100, 100)) //in pixels
   .into(imageView);
+```
+
+STEP 4:
+Release the detector when you are done with the detector. (In onDestory() method)
+
+```java
+PicassoFaceDetector.releaseDetector();
 ```
 
 That's it! It will do the rest.
