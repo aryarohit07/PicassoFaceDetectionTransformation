@@ -18,7 +18,7 @@ dependencies {
 }
 ```
 STEP 2:
-Intialize the detector with either activity's context for application context in onCreate() method
+Intialize the detector with either activity's context for application context in ```onCreate()``` method
 
 ```java
 PicassoFaceDetector.initialize(this); // 'this' is context
@@ -34,18 +34,16 @@ Picasso
   .load(url)
   .fit() // use fit() and centerInside() for making it memory efficient.
   .centerInside()
-  .transform(new CenterFaceCrop(100, 100)) //in pixels
+  .transform(new CenterFaceCrop(100, 100)) //in pixels. You can also use CenterFaceCrop(int width, int height, int unit) to provide width, height in DP.
   .into(imageView);
 ```
 
 STEP 4:
-Release the detector when you are done with the detector. (In onDestory() method)
+Release the detector when you are done with the detector. (In ```onDestory()``` method)
 
 ```java
 PicassoFaceDetector.releaseDetector();
 ```
-
-That's it! It will do the rest.
 
 **Note:** If no face is detected, it will fallback to CENTER CROP.
 
