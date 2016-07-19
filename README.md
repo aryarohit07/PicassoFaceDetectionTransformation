@@ -18,6 +18,7 @@ dependencies {
 }
 ```
 STEP 2:
+
 Intialize the detector with either activity's context for application context in ```onCreate()``` method
 
 ```java
