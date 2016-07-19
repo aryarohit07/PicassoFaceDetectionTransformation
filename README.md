@@ -39,6 +39,7 @@ Picasso
 ```
 
 STEP 4:
+
 Release the detector when you are done with the detector. (In ```onDestory()``` method)
 
 ```java
