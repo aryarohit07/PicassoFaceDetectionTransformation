@@ -14,7 +14,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.1@aar'
+    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.1'
 }
 ```
 STEP 2:
