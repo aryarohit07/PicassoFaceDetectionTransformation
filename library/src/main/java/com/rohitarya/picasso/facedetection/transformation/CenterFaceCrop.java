@@ -102,7 +102,7 @@ public class CenterFaceCrop implements Transformation {
 
     @Override
     public String key() {
-        return CenterFaceCrop.class.getCanonicalName()+"width-"+width+"height-"+height;
+        return CenterFaceCrop.class.getCanonicalName()+"-width-"+width+"height-"+height;
     }
 
     private boolean detectFace(Bitmap bitmap, int[] faceRect) {

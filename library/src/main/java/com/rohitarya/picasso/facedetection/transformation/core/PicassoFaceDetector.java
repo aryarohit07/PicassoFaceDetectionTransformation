@@ -48,6 +48,7 @@ public class PicassoFaceDetector {
     public static void releaseDetector() {
         if(faceDetector!=null) {
             faceDetector.release();
+            faceDetector = null;
         }
     }
 }
