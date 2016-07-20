@@ -24,6 +24,10 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile "com.google.android.gms:play-services-vision:${GOOGLE_PLAY_VERSION}"
     compile "com.squareup.picasso:picasso:${PICASSO_VERSION}"

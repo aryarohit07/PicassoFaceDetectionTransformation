@@ -14,15 +14,15 @@ repositories {
     jcenter()
 }
 dependencies {
-    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.1'
+    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.2'
 }
 ```
 STEP 2:
 
-Intialize the detector with either activity's context for application context in ```onCreate()``` method
+Initialize the detector
 
 ```java
-PicassoFaceDetector.initialize(this); // 'this' is context
+PicassoFaceDetector.initialize(context);
 ```
 
 STEP 3:
@@ -35,13 +35,13 @@ Picasso
   .load(url)
   .fit() // use fit() and centerInside() for making it memory efficient.
   .centerInside()
-  .transform(new CenterFaceCrop(100, 100)) //in pixels. You can also use CenterFaceCrop(int width, int height, int unit) to provide width, height in DP.
+  .transform(new CenterFaceCrop(100, 100)) //in pixels. You can also use CenterFaceCrop(width, height, unit) to provide width, height in DP.
   .into(imageView);
 ```
 
 STEP 4:
 
-Release the detector when you are done with the detector. (In ```onDestory()``` method)
+Release the detector when you are done with the detector. (May be in ```onDestory()``` method)
 
 ```java
 PicassoFaceDetector.releaseDetector();
