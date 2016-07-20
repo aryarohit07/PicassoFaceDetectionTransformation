@@ -5,7 +5,7 @@
 
 You can see the results on [my Medium blog](https://medium.com/@rohitarya/face-centering-android-library-build-on-top-of-google-vision-api-f88661b97959#.h2efha7xf).
 
-Are you using **Glide**? [Check here](https://github.com/aryarohit07/GlideFaceDetectionTransformation).
+Are you using **Glide**? [GlideFaceDetectionTransformation](https://github.com/aryarohit07/GlideFaceDetectionTransformation).
 
 ### How to use it?
 
