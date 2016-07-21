@@ -10,8 +10,8 @@ Are you using **Glide**? [GlideFaceDetectionTransformation](https://github.com/a
 ### How to use it?
 
 STEP 1:
-Gradle
--------
+
+Grab via Gradle
 
 ```
 repositories {
@@ -21,9 +21,20 @@ dependencies {
     compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.2'
 }
 ```
+
+Or via Maven
+
+```
+<dependency>
+  <groupId>com.github.aryarohit07</groupId>
+  <artifactId>picasso-facedetection-transformation</artifactId>
+  <version>0.2</version>
+</dependency>
+```
+
 STEP 2:
 
-Initialize the detector
+Initialize the detector (May be in `onCreate()` method)
 
 ```java
 PicassoFaceDetector.initialize(context);
@@ -45,7 +56,7 @@ Picasso
 
 STEP 4:
 
-Release the detector when you are done with the detector. (May be in ```onDestory()``` method)
+Release the detector when you are done with the detector. (May be in `onDestory()` method)
 
 ```java
 PicassoFaceDetector.releaseDetector();
