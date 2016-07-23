@@ -36,29 +36,30 @@ public class CenterFaceCrop implements Transformation {
             this.width = resources.getDimensionPixelSize(width);
             this.height = resources.getDimensionPixelSize(height);
         }else {
-            throw new RuntimeException("unit should either be CenterFaceCrop.PIXEL, CenterFaceCrop.DP");
+            throw new IllegalArgumentException("unit should either be CenterFaceCrop.PIXEL, CenterFaceCrop.DP");
         }
     }
 
     @Override
     public Bitmap transform(Bitmap original) {
         if(width==0 || height==0) {
-            throw new RuntimeException("width or height should not be zero!");
+            throw new IllegalArgumentException("width or height should not be zero!");
         }
-        Bitmap.Config config =
-                original.getConfig() != null ? original.getConfig() : Bitmap.Config.ARGB_8888;
-        Bitmap result = Bitmap.createBitmap(width, height, config);
-
         float scaleX = (float) width / original.getWidth();
         float scaleY = (float) height / original.getHeight();
-        float scale = Math.max(scaleX, scaleY);
-
-        float left = 0f;
-        float top = 0f;
-
-        float scaledWidth = width, scaledHeight = height;
 
         if(scaleX!=scaleY) {
+
+            Bitmap.Config config =
+                    original.getConfig() != null ? original.getConfig() : Bitmap.Config.ARGB_8888;
+            Bitmap result = Bitmap.createBitmap(width, height, config);
+
+            float scale = Math.max(scaleX, scaleY);
+
+            float left = 0f;
+            float top = 0f;
+
+            float scaledWidth = width, scaledHeight = height;
 
             int[] faceRect = new int[4];
             boolean faceDetected = detectFace(original, faceRect);
@@ -89,15 +90,17 @@ public class CenterFaceCrop implements Transformation {
                     top = (height - scaledHeight) / 2; // center crop
                 }
             }
+
+            RectF targetRect = new RectF(left, top, left + scaledWidth, top + scaledHeight);
+            Canvas canvas = new Canvas(result);
+            canvas.drawBitmap(original, null, targetRect, null);
+
+            original.recycle();
+
+            return result;
+        } else {
+            return original;
         }
-
-        RectF targetRect = new RectF(left, top, left + scaledWidth, top + scaledHeight);
-        Canvas canvas = new Canvas(result);
-        canvas.drawBitmap(original, null, targetRect, null);
-
-        original.recycle();
-
-        return result;
     }
 
     @Override
