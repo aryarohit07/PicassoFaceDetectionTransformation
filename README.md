@@ -3,11 +3,15 @@
 
 ### An Android image transformation library providing cropping above Face Detection (Face Centering) for [Picasso](https://github.com/square/picasso)
 
+You can see the results on [my Medium article](https://medium.freecodecamp.com/face-centering-android-library-build-on-top-of-google-vision-api-f88661b97959).
+
+Are you using **Glide**? [GlideFaceDetectionTransformation](https://github.com/aryarohit07/GlideFaceDetectionTransformation).
+
 ### How to use it?
 
 STEP 1:
-Gradle
--------
+
+Grab via Gradle
 
 ```
 repositories {
@@ -17,9 +21,20 @@ dependencies {
     compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.2'
 }
 ```
+
+Or via Maven
+
+```
+<dependency>
+  <groupId>com.github.aryarohit07</groupId>
+  <artifactId>picasso-facedetection-transformation</artifactId>
+  <version>0.2</version>
+</dependency>
+```
+
 STEP 2:
 
-Initialize the detector
+Initialize the detector (May be in `onCreate()` method)
 
 ```java
 PicassoFaceDetector.initialize(context);
@@ -41,7 +56,7 @@ Picasso
 
 STEP 4:
 
-Release the detector when you are done with the detector. (May be in ```onDestory()``` method)
+Release the detector when you are done with the detector. (May be in `onDestory()` method)
 
 ```java
 PicassoFaceDetector.releaseDetector();
