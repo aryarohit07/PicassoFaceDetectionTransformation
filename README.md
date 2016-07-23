@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.2'
+    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.2.1'
 }
 ```
 
@@ -28,7 +28,7 @@ Or via Maven
 <dependency>
   <groupId>com.github.aryarohit07</groupId>
   <artifactId>picasso-facedetection-transformation</artifactId>
-  <version>0.2</version>
+  <version>0.2.1</version>
 </dependency>
 ```
 
