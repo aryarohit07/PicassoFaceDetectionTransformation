@@ -56,7 +56,7 @@ Picasso
 
 STEP 4:
 
-Release the detector when you are done with the detector. (May be in `onDestory()` method)
+The face detector uses native resources in order to do detection. For this reason, it is necessary to release the detector instance once it is no longer needed (May be in `onDestory()` method)
 
 ```java
 PicassoFaceDetector.releaseDetector();
