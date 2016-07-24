@@ -3,9 +3,47 @@
 
 ### An Android image transformation library providing cropping above Face Detection (Face Centering) for [Picasso](https://github.com/square/picasso)
 
-You can see the results on [my Medium article](https://medium.freecodecamp.com/face-centering-android-library-build-on-top-of-google-vision-api-f88661b97959).
-
 Are you using **Glide**? [GlideFaceDetectionTransformation](https://github.com/aryarohit07/GlideFaceDetectionTransformation).
+
+Results
+------
+
+**Original Image**
+
+![original image 1](/images/original_image1.jpg?raw=true )
+
+**Results after cropping**
+
+![resulting image 1](/images/result_image1.jpg?raw=true)
+
+
+**Original Image**
+
+![original image 2](/images/original_image2.jpg?raw=true )
+
+**Results after cropping**
+
+![resulting image 2](/images/result_image2.jpg?raw=true)
+
+
+**Original Image**
+
+![original image 3](/images/original_image3.jpg?raw=true )
+
+**Results after cropping**
+
+![resulting image 3](/images/result_image3.jpg?raw=true)
+
+**Original Image**
+
+![original image 4](/images/original_image4.jpg?raw=true )
+
+**Results after cropping**
+
+![resulting image 4](/images/result_image4.jpg?raw=true)
+
+You can read more on [my Medium article](https://medium.freecodecamp.com/face-centering-android-library-build-on-top-of-google-vision-api-f88661b97959).
+
 
 ### How to use it?
 
