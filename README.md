@@ -109,6 +109,9 @@ com.google.android.gms:play-services-vision:9.2.1
 com.squareup.picasso:picasso:2.5.2
 ```
 
+**If you liked it, please Star it.**
+
+
 License
 -------
 
