@@ -112,6 +112,11 @@ com.squareup.picasso:picasso:2.5.2
 **If you liked it, please Star it.**
 
 
+TODO
+----
+* Support for multiple faces.
+* Making it generic for any point.
+
 License
 -------
 
