@@ -13,23 +13,26 @@ public class PicassoFaceDetector {
     private static Context mContext;
 
     public static Context getContext() {
-        if(mContext==null) {
-            throw new RuntimeException("Initialize PicassoFaceDetector by calling PicassoFaceDetector.initialize(context) in your application's/activity's onCreate() method.");
+        if (mContext == null) {
+            throw new RuntimeException("Initialize PicassoFaceDetector by calling PicassoFaceDetector.initialize(context).");
         }
         return mContext;
     }
 
     public static void initialize(Context context) {
-        mContext = context;
+        if (context == null) {
+            throw new IllegalArgumentException("Context must not be null.");
+        }
+        mContext = context.getApplicationContext();
         initDetector();
     }
 
     private static void initDetector() {
-        if(null==faceDetector) {
-            synchronized ((PicassoFaceDetector.class)) {
-                if(null==faceDetector) {
+        if (faceDetector == null) {
+            synchronized (PicassoFaceDetector.class) {
+                if (faceDetector == null) {
                     faceDetector = new
-                            FaceDetector.Builder(mContext)
+                            FaceDetector.Builder(getContext())
                             .setTrackingEnabled(false)
                             .build();
                 }
@@ -38,17 +41,15 @@ public class PicassoFaceDetector {
     }
 
     public static FaceDetector getFaceDetector() {
-        if(mContext==null) {
-            throw new RuntimeException("Initialize PicassoFaceDetector by calling PicassoFaceDetector.initialize(context) in your application's/activity's onCreate() method.");
-        }
         initDetector();
         return faceDetector;
     }
 
     public static void releaseDetector() {
-        if(faceDetector!=null) {
+        if (faceDetector != null) {
             faceDetector.release();
             faceDetector = null;
         }
+        mContext = null;
     }
 }
