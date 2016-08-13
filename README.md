@@ -56,7 +56,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.2.1'
+    compile 'com.github.aryarohit07:picasso-facedetection-transformation:0.3.0'
 }
 ```
 
@@ -66,7 +66,7 @@ Or via Maven
 <dependency>
   <groupId>com.github.aryarohit07</groupId>
   <artifactId>picasso-facedetection-transformation</artifactId>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -88,7 +88,7 @@ Picasso
   .load(url)
   .fit() // use fit() and centerInside() for making it memory efficient.
   .centerInside()
-  .transform(new CenterFaceCrop(100, 100)) //in pixels. You can also use CenterFaceCrop(width, height, unit) to provide width, height in DP.
+  .transform(new FaceCenterCrop(100, 100)) //in pixels. You can also use FaceCenterCrop(width, height, unit) to provide width, height in DP.
   .into(imageView);
 ```
 
@@ -105,7 +105,7 @@ PicassoFaceDetector.releaseDetector();
 Library dependencies:
 ------
 ```java
-com.google.android.gms:play-services-vision:9.2.1
+com.google.android.gms:play-services-vision:9.4.0
 com.squareup.picasso:picasso:2.5.2
 ```
 
@@ -114,8 +114,17 @@ com.squareup.picasso:picasso:2.5.2
 
 TODO
 ----
-* Support for multiple faces.
 * Making it generic for any point.
+
+**Performance:**
+Time taken to detect faces in the original image.
+| width | height | time taken(ms) |
+|-------|--------|----------------|
+|  640  |  360   |  60-150        |
+|  900  |  600   |  100-200       |
+|  1280 |  720   |  250-350       |
+|  1920 |  1080  |  350-400       |
+|  2048 |  1536  |  500-550       |
 
 License
 -------

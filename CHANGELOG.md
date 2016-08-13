@@ -1,3 +1,18 @@
+Version 0.3.0 *(14-08-2016)*
+----------------------------
+
+* Face Detector initialization is moved to background thread.
+* CenterFaceCrop is changed to **FaceCenterCrop**
+* Multiple faces in the image are being considered.
+* Bug fixes
+
+**Library dependencies updated:**
+```java
+com.google.android.gms:play-services-vision:9.4.0
+com.squareup.picasso:picasso:2.5.2
+```
+
+
 Version 0.2.1 *(23-07-2016)*
 --------------------------
 

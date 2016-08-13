@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 ext {
     PUBLISH_GROUP_ID = 'com.github.aryarohit07'
     PUBLISH_ARTIFACT_ID = 'picasso-facedetection-transformation'
-    PUBLISH_VERSION = PUBLISH_VERSION_NAME
+    PUBLISH_VERSION = VERSION_NAME
 }
 
 android {
