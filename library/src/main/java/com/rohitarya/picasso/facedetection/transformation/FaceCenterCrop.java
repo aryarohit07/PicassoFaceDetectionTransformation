@@ -112,8 +112,7 @@ public class FaceCenterCrop implements Transformation {
     }
 
     /**
-     * Calculates center point in bitmap, around which cropping needs to be performed.
-     * Right now, it takes on the average of all faces (their centers).
+     * Calculates a point (focus point) in the bitmap, around which cropping needs to be performed.
      *
      * @param bitmap           Bitmap in which faces are to be detected.
      * @param centerOfAllFaces To store the center point.

@@ -118,6 +118,8 @@ TODO
 
 **Performance:**
 Time taken to detect faces in the original image.
+
+
 | width | height | time taken(ms) |
 |-------|--------|----------------|
 |  640  |  360   |  60-150        |
