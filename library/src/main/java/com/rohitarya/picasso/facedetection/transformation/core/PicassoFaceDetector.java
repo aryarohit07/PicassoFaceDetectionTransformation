@@ -23,7 +23,7 @@ public class PicassoFaceDetector {
         if (context == null) {
             throw new IllegalArgumentException("Context must not be null.");
         }
-        mContext = context.getApplicationContext();
+        mContext = context.getApplicationContext(); // To make it independent of activity lifecycle
         initDetector();
     }
 
@@ -45,6 +45,10 @@ public class PicassoFaceDetector {
         return faceDetector;
     }
 
+    /**
+     * Release the detector when you no longer need it.
+     * Remember to call PicassoFaceDetector.initialize(context) if you have to re-use.
+     */
     public static void releaseDetector() {
         if (faceDetector != null) {
             faceDetector.release();
