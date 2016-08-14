@@ -1,6 +1,9 @@
 
 # Picasso face detection transformation
 
+[ ![Download](https://api.bintray.com/packages/aryarohit07/android/picasso-facedetection-transformation/images/download.svg) ](https://bintray.com/aryarohit07/android/picasso-facedetection-transformation/_latestVersion)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-PicassoFaceDetectionTransformation-blue.svg?style=flat)](http://android-arsenal.com/details/1/4015)
+
 ### An Android image transformation library providing cropping above Face Detection (Face Centering) for [Picasso](https://github.com/square/picasso)
 
 Are you using **Glide**? [GlideFaceDetectionTransformation](https://github.com/aryarohit07/GlideFaceDetectionTransformation).
