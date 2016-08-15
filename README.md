@@ -8,6 +8,9 @@
 
 Are you using **Glide**? [GlideFaceDetectionTransformation](https://github.com/aryarohit07/GlideFaceDetectionTransformation).
 
+Are you using **Fresco**? [FrescoFaceDetectionProcessor](https://github.com/aryarohit07/FrescoFaceDetectionProcessor).
+
+
 Results
 ------
 
